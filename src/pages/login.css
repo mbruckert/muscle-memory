@@ -1,0 +1,19 @@
+/* Login */
+
+ion-content {
+    --background: linear-gradient(#000A63, #6D7CFF);
+  }
+
+    ion-title {
+      height: 60px;
+    }
+
+    .flex{
+        display: flex;
+        align-items: center;
+        text-align: center;
+    }
+    .GoogleButton{
+        align-items: center;
+        margin-top: 400px;
+    }
