@@ -1,0 +1,7 @@
+{
+  "name": "MuscleMemory",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "react"
+}
