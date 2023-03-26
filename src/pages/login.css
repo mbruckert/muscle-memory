@@ -4,27 +4,30 @@ ion-content {
     --background: linear-gradient(#000A63, #6D7CFF);
 }
 
-ion-title {
-  height: 120px;
-}
-
 .flex{
     display: flex;
     align-items: center;
     text-align: center;
 }
 
-.loginButton{
-  align-items: center;
-  margin-top: 500px
+.loginBox{
+  display: flex;
+  width: 300px;
+  height: 300px;
+  color: #ffffff
 }
 
-  .Title{
-    align-items: center;
-    font-size: 500px;
-    margin-top: 75px;
-    font-family: 'Franklin Gothic Medium';
-    color: #ffffff;
-    font-style: bold;
-    font-weight: 400
+.loginButton{
+  align-items: center;
+  margin-top: 75px
+}
+
+.Title{
+  align-items: center;
+  margin-top: 50px;
+  font-family: 'Franklin Gothic Medium';
+  color: #ffffff;
+  font-style: bold;
+  font-weight: 400;
+  margin-bottom: 100px
 }
