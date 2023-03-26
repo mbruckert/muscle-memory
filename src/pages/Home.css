@@ -1,0 +1,19 @@
+.rect {
+    display: flex;
+    width: 500px;
+    height: 600px;
+    background: white;
+    margin: 0 auto;
+    margin-top: 20px;
+  }
+
+  .userInput{
+    margin-top: 550px;
+    width: 500px;
+    height: 50px;
+  }
+
+    
+  .Send{
+    
+  }
