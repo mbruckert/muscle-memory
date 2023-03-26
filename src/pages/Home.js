@@ -7,10 +7,9 @@ function Home() {
     <IonPage>
       <IonContent fullscreen>
         <IonToolbar>
-          <IonHeader>
           <IonTitle> Muscle Memory </IonTitle>
-          </IonHeader>
             </IonToolbar>
+
               <div className='chat'>
         
                 <div className='messageBox'>
