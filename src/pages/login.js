@@ -16,29 +16,32 @@ function Login() {
       </div>
 
           <div className = "loginBox">
-<IonList>
-<IonItem>
 
-  <label>
-    
-    <input mbsc-input type = "text" data-label = "Email" placeholder = "Enter Email" />
-  
-  </label>
+            <IonList>
 
-</IonItem>
+              <IonItem>
 
-<IonItem>
+                <label>
+                  
+                  <input mbsc-input type = "text" data-label = "Email" placeholder = "Enter Email" />
+                
+                </label>
 
-  <label>
+              </IonItem>
 
-      <input mbsc-input type = "password" data-label = "Password" placeholder = "Enter Password" data-start-icon="lock2" data-password-toggle = "true"/>
-  
-  </label>
+              <IonItem>
 
-</IonItem>
-</IonList>
+                <label>
 
-</div>
+                    <input mbsc-input type = "password" data-label = "Password" placeholder = "Enter Password" data-start-icon="lock2" data-password-toggle = "true"/>
+                
+                </label>
+
+              </IonItem>
+
+            </IonList>
+
+            </div>
           
           <div className = "loginButton">
 
