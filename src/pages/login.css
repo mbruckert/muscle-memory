@@ -5,22 +5,26 @@ ion-content {
   }
 
   ion-title {
-    height: 60px;
+    height: 120px;
   }
 
-    .flex{
-        display: flex;
-        align-items: center;
-        text-align: center;
-    }
-
-    .GoogleButton{
+  .flex{
+      display: flex;
       align-items: center;
-      margin-top: 250px;
+      text-align: center;
+  }
+
+  .loginButton{
+    align-items: center;
+    margin-top: 250px
   }
 
     .Title{
       align-items: center;
       font-size: 50px;
       margin-top: 50px;
+      font-family: 'Franklin Gothic Medium';
+      color: #ffffff;
+      font-style: normal;
+      font-weight: 400
   }

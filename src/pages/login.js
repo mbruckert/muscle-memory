@@ -2,7 +2,6 @@ import { IonContent, IonHeader, IonPage, IonTitle, IonToolbar, IonButton } from 
 import ExploreContainer from '../components/ExploreContainer';
 import './login.css';
 
-
 function Login() {
   return (
     <IonPage>
@@ -13,11 +12,7 @@ function Login() {
 
           <div className = "Title"> 
 
-            <IonTitle size = "large" color = "ion-color-tertiary-contrast" style = {
-              {
-                fontSize: '30px',
-              }
-            }> Muscle Memory </IonTitle>
+            <IonTitle> Muscle Memory </IonTitle>
 
           </div>
           
