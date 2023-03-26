@@ -6,17 +6,29 @@ import './login.css';
 function Login() {
   return (
     <IonPage>
-      <div className="flex">
-      <IonContent fullscreen>
-        <div className="Title"> 
 
-        <IonTitle size="large" style={{fontSize: '30px'}}>Muscle Memory</IonTitle>
+      <div className = "flex">
 
-        </div>
-        
-      <div className = "GoogleButton"><IonButton>Login With Google</IonButton>
-        </div>
-      </IonContent>
+        <IonContent fullscreen>
+
+          <div className = "Title"> 
+
+            <IonTitle size = "large" color = "ion-color-tertiary-contrast" style = {
+              {
+                fontSize: '30px',
+              }
+            }> Muscle Memory </IonTitle>
+
+          </div>
+          
+          <div className = "loginButton" color = "ion-color-success-contrast">
+
+            <IonButton> Login </IonButton>
+            
+          </div>
+
+        </IonContent>
+
       </div>
 
     </IonPage>
