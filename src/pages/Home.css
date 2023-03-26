@@ -7,15 +7,20 @@
     margin-top: 50px
   }
 
+  .send{
+    
+    margin-left: 500px;
+    padding-bottom: 200px;
+  
+  }
+
 .messageBox{
-  margin-top: 685px;
+  margin-top: 500px;
   width: 600px;
   height: 50px
 }
 
-ion-fab {
-  padding-left: 520px ;
-}
+
 
 .botTextBox{
   width: 100px;
