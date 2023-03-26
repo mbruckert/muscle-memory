@@ -1,12 +1,12 @@
 import { IonContent, IonHeader, IonPage, IonTitle, IonToolbar } from '@ionic/react';
-import ExploreContainer from '../components/ExploreContainer';
+import { Virtuoso } from 'react-virtuoso';
 import './questionnaire.css';
 
 function Questionnaire() {
   return (
 
     <IonPage>
-
+ 
       <div className="Header">
 
         <IonHeader>
