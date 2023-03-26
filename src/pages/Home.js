@@ -1,4 +1,3 @@
-import { useState } from 'react';
 import { IonContent, IonHeader, IonPage, IonTitle, IonToolbar, getAssetPath, IonFooter, IonInput } from '@ionic/react';
 import './Home.css';
 
@@ -30,7 +29,7 @@ function Home() {
     <ion-icon name="add"></ion-icon>
   </ion-fab-button>
   </ion-fab>
-  
+
   </ion-item>
             </IonFooter>
 
