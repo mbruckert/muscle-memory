@@ -1,16 +1,19 @@
 .rect {
     display: flex;
     width: 500px;
-    height: 600px;
+    height: 685px;
     background: white;
     margin: 0 auto;
     margin-top: 20px;
   }
 
-  .userInput{
-    margin-top: 550px;
+
+  .messages{
+    margin-top: 685px;
     width: 500px;
     height: 50px;
   }
 
-    
+  ion-fab {
+    padding-left: 420px ;
+  }

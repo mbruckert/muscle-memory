@@ -1,5 +1,5 @@
-import { IonContent, IonHeader, IonPage, IonTitle, IonToolbar } from '@ionic/react';
-import ExploreContainer from '../components/ExploreContainer';
+import { useState } from 'react';
+import { IonContent, IonHeader, IonPage, IonTitle, IonToolbar, getAssetPath, IonFooter, IonInput } from '@ionic/react';
 import './Home.css';
 
 function Home() {
@@ -15,30 +15,33 @@ function Home() {
           <IonToolbar>
             <IonTitle size="large">Muscle Memory</IonTitle>
           </IonToolbar>
-          </IonHeader>
-          <div className='rect'>
+        </IonHeader>
+        <div className='rect'>
+          <div className='messages'>
+            <IonToolbar>
 
-    <div className="userInput">
-    <ion-list>
+              <IonFooter>
+              <ion-item>
+    <ion-label></ion-label>
+    <ion-input placeholder="Muscle Memory"></ion-input>
     
-    <ion-item>
-    <ion-input placeholder="MuscleMemory"></ion-input>
-  </ion-item>
-
-    </ion-list>
- 
-    </div>
+    <ion-fab>
+  <ion-fab-button size="small">
+    <ion-icon name="add"></ion-icon>
+  </ion-fab-button>
+  </ion-fab>
   
-        </div>
+  </ion-item>
+            </IonFooter>
 
-        <div className='Send'>
 
-          <ion-button shape="round">Send</ion-button>
+            </IonToolbar>
+
+
+            
+          </div>
         </div>
       </IonContent>
-      
-
-
     </IonPage>
   );
 };
