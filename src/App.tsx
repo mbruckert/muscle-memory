@@ -22,7 +22,7 @@ import '@ionic/react/css/display.css';
 /* Theme variables */
 import './theme/variables.css';
 import Login from "./pages/login"
-import Questionaire from "./pages/questionaire"
+import Questionaire from "./pages/questionnaire"
 
 setupIonicReact();
 
@@ -39,7 +39,7 @@ const App: React.FC = () => (
         <Route exact path="/">
           <Redirect to="/Login" />
         </Route>
-        <Route exact path="/questionaire">
+        <Route exact path="/questionnaire">
           <Questionaire />
         </Route>
       </IonRouterOutlet>
