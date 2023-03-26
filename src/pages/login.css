@@ -12,8 +12,11 @@ ion-content {
 
 .loginBox{
   
-  display: flex;
-  width: 300px;
+  display: block;
+  text-align: center;
+  margin-left:  auto;
+  margin-right: auto;
+  width: 220px;
   height: 125px;
   color: #ffffff
 
