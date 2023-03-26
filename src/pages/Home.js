@@ -7,17 +7,38 @@ function Home() {
     <IonPage>
       <IonHeader>
         <IonToolbar>
-          <IonTitle>Blank</IonTitle>
+          <IonTitle>Muscle Memory</IonTitle>
         </IonToolbar>
       </IonHeader>
       <IonContent fullscreen>
         <IonHeader collapse="condense">
           <IonToolbar>
-            <IonTitle size="large">Blank</IonTitle>
+            <IonTitle size="large">Muscle Memory</IonTitle>
           </IonToolbar>
-        </IonHeader>
-        <ExploreContainer />
+          </IonHeader>
+          <div className='rect'>
+
+    <div className="userInput">
+    <ion-list>
+    
+    <ion-item>
+    <ion-input placeholder="MuscleMemory"></ion-input>
+  </ion-item>
+
+    </ion-list>
+ 
+    </div>
+  
+        </div>
+
+        <div className='Send'>
+
+          <ion-button shape="round">Send</ion-button>
+        </div>
       </IonContent>
+      
+
+
     </IonPage>
   );
 };

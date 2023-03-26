@@ -16,7 +16,6 @@ ion-content {
     .Title{
         align-items: center;
         font-size: 50px;
-        margin-top: -50px;
     }
     .Inputs{
       display: flex;

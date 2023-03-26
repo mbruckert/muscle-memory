@@ -8,7 +8,8 @@ function Login() {
     <IonPage>
       <div className="flex">
       <IonContent fullscreen>
-        <div className = "Title"> 
+        <div className="Title"> 
+
         <IonTitle size="large" style={{fontSize: '30px'}}>Muscle Memory</IonTitle>
 
         </div>
