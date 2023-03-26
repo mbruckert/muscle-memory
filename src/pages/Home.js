@@ -17,9 +17,17 @@ function Home() {
   return (
     <IonPage>
       <IonContent fullscreen>
-        <IonToolbar>
-          <IonTitle> Muscle Memory </IonTitle>
-        </IonToolbar>
+      <IonToolbar>
+
+      <IonTitle> Muscle Memory </IonTitle>
+        <IonButton slot="end" onClick = {(data = window.localStorage.getItem("token")) => {
+              console.log(data);
+              window.localStorage.removeItem("token", data); 
+              window.location.href = "/Login"
+          }}>Logout</IonButton>
+
+      </IonToolbar>
+
         <div className='chat'>
           <div className='messageBox'>
             {messages.map((message, index) => {
