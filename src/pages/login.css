@@ -1,38 +1,30 @@
 /* Login */
 
 ion-content {
-    --background: linear-gradient(#000A63, #6D7CFF);
+  --background: linear-gradient(#000A63, #6D7CFF);
 }
 
 .flex{
-    display: flex;
-    align-items: center;
-    text-align: center
+  display: flex;
+  align-items: center;
+  text-align: center
 }
 
 .loginBox{
-  
   display: block;
-  text-align: center;
-  margin-left:  auto;
-  margin-right: auto;
   width: 220px;
   height: 125px;
-  color: #ffffff
-
+  color: #ffffff;
+  margin-top: 100px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .loginButton{
-  align-items: center;
+  text-align: center;
   margin-top: 75px
 }
 
 .Title{
-  align-items: center;
-  margin-top: 50px;
-  font-family: 'Franklin Gothic Medium';
-  color: #ffffff;
-  font-style: bold;
-  font-weight: 400;
-  margin-bottom: 100px
+  color: #000000
 }

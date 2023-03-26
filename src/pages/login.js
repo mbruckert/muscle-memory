@@ -3,17 +3,16 @@ import './login.css';
 
 function Login() {
   return (
+    
     <IonPage>
 
-      <div className = "flex">
+      <IonContent fullscreen>
 
-        <IonContent fullscreen>
-        
-          <div className = "Title"> 
+        <IonToolbar>
 
-        <IonTitle> Muscle Memory </IonTitle>
-
-      </div>
+            <IonTitle> Muscle Memory </IonTitle>
+          
+        </IonToolbar>
 
           <div className = "loginBox">
 
@@ -41,7 +40,7 @@ function Login() {
 
             </IonList>
 
-            </div>
+          </div>
           
           <div className = "loginButton">
 
@@ -49,11 +48,10 @@ function Login() {
             
           </div>
 
-        </IonContent>
-
-      </div>
+      </IonContent>
 
     </IonPage>
+
   );
 };
 
