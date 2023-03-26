@@ -2,7 +2,7 @@ import { Redirect, Route } from 'react-router-dom';
 import { IonApp, IonRouterOutlet, setupIonicReact } from '@ionic/react';
 import { IonReactRouter } from '@ionic/react-router';
 
-import Home from './pages/home.js';
+import Home from './pages/Home.js';
 import Login from "./pages/login"
 import Questionnaire from "./pages/questionnaire"
 import Signup from "./pages/signup"
