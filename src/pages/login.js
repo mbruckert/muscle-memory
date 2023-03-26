@@ -8,11 +8,16 @@ function Login() {
     <IonPage>
       <div className="flex">
       <IonContent fullscreen>
-      <IonTitle>Muscle Memory</IonTitle>
+        <div className = "Title"> 
+        <IonTitle size="large" style={{fontSize: '30px'}}>Muscle Memory</IonTitle>
+
+        </div>
+        
       <div className = "GoogleButton"><IonButton>Login With Google</IonButton>
         </div>
       </IonContent>
       </div>
+
     </IonPage>
   );
 };
