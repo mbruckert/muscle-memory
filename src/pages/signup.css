@@ -4,4 +4,27 @@ ion-content {
     --background: linear-gradient(#000A63, #6D7CFF);
 }
 
+.flex{
+    display: flex;
+    align-items: center;
+    text-align: center
+}
 
+.signupBox{
+  display: block;
+  width: 220px;
+  height: 125px;
+  color: #ffffff;
+  margin-top: 100px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.signupButton{
+  text-align: center;
+  margin-top: 75px
+}
+
+.Title{
+  color: #000000
+}

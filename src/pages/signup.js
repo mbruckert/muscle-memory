@@ -1,4 +1,4 @@
-import { IonContent, IonHeader, IonPage, IonTitle, IonToolbar, IonButton } from '@ionic/react';
+import { IonContent, IonHeader, IonPage, IonTitle, IonToolbar, IonButton, IonList, IonItem } from '@ionic/react';
 import './signup.css';
 
 function Signup() {
@@ -6,16 +6,49 @@ function Signup() {
 
     <IonPage>
 
-      <div className = "flex">
+      <IonContent fullscreen>
 
-          <div className = "Title"> 
+        <IonToolbar>
 
-        <IonTitle> Muscle Memory </IonTitle>
+            <IonTitle> Muscle Memory </IonTitle>
+          
+        </IonToolbar>
 
-      </div>
-      </div>
+          <div className = "signupBox">
 
+            <IonList>
 
+              <IonItem>
+
+                <label>
+                  
+                  <input mbsc-input type = "text" data-label = "Email" placeholder = "Enter Email" />
+                
+                </label>
+
+              </IonItem>
+
+              <IonItem>
+
+                <label>
+
+                    <input mbsc-input type = "password" data-label = "Password" placeholder = "Enter Password" data-start-icon="lock2" data-password-toggle = "true"/>
+                
+                </label>
+
+              </IonItem>
+
+            </IonList>
+
+          </div>
+          
+          <div className = "signupButton">
+
+            <IonButton> Signup </IonButton>
+            
+          </div>
+
+      </IonContent>
 
     </IonPage>
 
