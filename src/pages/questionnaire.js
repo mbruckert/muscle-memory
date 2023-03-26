@@ -110,12 +110,12 @@ function questionnaire() {
 
             <ion-label position="stacked">Goal Deadline</ion-label>
             <ion-input placeholder="Enter Goal Deadline MM-DD-YYYY"></ion-input>
-            
+
           </ion-item>
 
         </ion-list>
+
         </div>
-        
 
     </IonPage>
   );
