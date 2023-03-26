@@ -1,19 +1,63 @@
-.rect {
+.chat {
     display: flex;
-    width: 500px;
-    height: 685px;
-    background: white;
+    width: 600px;
+    height: 550px;
+    background: #ffffff;
     margin: 0 auto;
-    margin-top: 20px;
+    margin-top: 50px
   }
 
+.messageBox{
+  margin-top: 685px;
+  width: 600px;
+  height: 50px
+}
 
-  .messages{
-    margin-top: 685px;
-    width: 500px;
-    height: 50px;
-  }
+ion-fab {
+  padding-left: 520px ;
+}
 
-  ion-fab {
-    padding-left: 420px ;
-  }
+.botTextBox{
+  width: 100px;
+  height: 50px;
+  color: #E4E4E4
+}
+
+.botTextMessages{
+  font-size: 150px;
+  margin-top: 100px;
+  font-family: 'Franklin Gothic Medium';
+  color: #000000;
+  font-style: normal;
+  font-weight: 400
+}
+
+.clientTextBox{
+  width: 100px;
+  height: 50px;
+  color: #495BFF
+}
+
+.clientTextMessages{
+  font-size: 150px;
+  margin-top: 100px;
+  font-family: 'Franklin Gothic Medium';
+  color: #ffffff;
+  font-style: normal
+}
+
+.names{
+  font-size: 100px;
+  font-family: 'Franklin Gothic Medium';
+  color: #000000;
+  opacity: 0.9;
+  font-style: normal
+}
+
+.times{
+  font-size: 50px;
+  font-family: 'Franklin Gothic Medium';
+  color: #000000;
+  opacity: 0.9;
+  font-style: normal
+}

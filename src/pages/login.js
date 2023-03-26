@@ -15,10 +15,16 @@ function Login() {
             <IonTitle> Muscle Memory </IonTitle>
 
           </div>
-          
-          <div className = "loginButton" color = "ion-color-success-contrast">
 
-            <IonButton> Login </IonButton>
+          <div>
+          
+            
+
+          </div>
+          
+          <div className = "loginButton">
+
+            <IonButton color = {'ion-color-warning-contrast'}> Login </IonButton>
             
           </div>
 

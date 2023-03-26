@@ -2,29 +2,29 @@
 
 ion-content {
     --background: linear-gradient(#000A63, #6D7CFF);
-  }
+}
 
-  ion-title {
-    height: 120px;
-  }
+ion-title {
+  height: 120px;
+}
 
-  .flex{
-      display: flex;
-      align-items: center;
-      text-align: center;
-  }
-
-  .loginButton{
+.flex{
+    display: flex;
     align-items: center;
-    margin-top: 250px
-  }
+    text-align: center;
+}
 
-    .Title{
-      align-items: center;
-      font-size: 50px;
-      margin-top: 50px;
-      font-family: 'Franklin Gothic Medium';
-      color: #ffffff;
-      font-style: normal;
-      font-weight: 400
-  }
+.loginButton{
+  align-items: center;
+  margin-top: 500px
+}
+
+  .Title{
+    align-items: center;
+    font-size: 500px;
+    margin-top: 75px;
+    font-family: 'Franklin Gothic Medium';
+    color: #ffffff;
+    font-style: bold;
+    font-weight: 400
+}

@@ -2,32 +2,44 @@ import { IonContent, IonHeader, IonPage, IonTitle, IonToolbar } from '@ionic/rea
 import ExploreContainer from '../components/ExploreContainer';
 import './questionnaire.css';
 
-function questionnaire() {
+function Questionnaire() {
   return (
 
     <IonPage>
+
       <div className="Header">
-      <IonHeader>
-        <IonToolbar>
-          <IonTitle>Muscle Memory</IonTitle>
-        </IonToolbar>
-      </IonHeader>
+
+        <IonHeader>
+
+          <IonToolbar>
+
+            <IonTitle> Muscle Memory </IonTitle>
+
+          </IonToolbar>
+
+        </IonHeader>
+
       </div>
 
-      <div className="Flexq">
-      <IonContent fullscreen>
-        <div className="Title">
-            <IonTitle size="large" style={
-              {
-                fontSize: '30px'
-              }
-            }> questionnaire </IonTitle>
-        </div>
+      <div className = "Flexq">
+
+        <IonContent fullscreen>
+          
+          <div className = "Title">
+
+              <IonTitle size = "large" style={
+                {
+                  fontSize: '30px'
+                }
+              }> questionnaire </IonTitle>
+          
+          </div>
 
         </IonContent>
-        </div>
+
+      </div>
         
-        <div className="Inputs">
+        <div className = "Inputs">
         <ion-list>
           <ion-item>
             
@@ -121,4 +133,4 @@ function questionnaire() {
   );
 };
 
-export default questionnaire;
+export default Questionnaire;
