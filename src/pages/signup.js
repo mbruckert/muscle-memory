@@ -1,5 +1,6 @@
 import { IonContent, IonHeader, IonPage, IonTitle, IonToolbar, IonButton, IonList, IonItem } from '@ionic/react';
 import { useState } from 'react';
+import {Link} from "react-router-dom";
 import './signup.css';
 
 function Signup() {
@@ -128,6 +129,12 @@ function Signup() {
             }}> Signup </IonButton>
             
           </div>
+
+          <ul>
+                <Link to="./Login" className="loginLink">
+                    Have an account? Login!
+                </Link>
+          </ul>
 
       </IonContent>
 

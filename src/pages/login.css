@@ -10,6 +10,14 @@ ion-content {
   text-align: center
 }
 
+.signupLink{
+  display: block;
+  align-items: center;
+  text-align: center;
+  color: #ffffff;
+  font-size: medium
+}
+
 .loginBox{
   display: block;
   width: 220px;
@@ -17,12 +25,12 @@ ion-content {
   color: #ffffff;
   margin-top: 100px;
   margin-left: auto;
-  margin-right: auto;
+  margin-right: auto
 }
 
 .loginButton{
   text-align: center;
-  margin-top: 75px
+  margin-top: 50px
 }
 
 .Title{

@@ -10,6 +10,13 @@ ion-content {
     text-align: center
 }
 
+.loginLink{
+  display: block;
+  text-align: center;
+  color: #ffffff;
+  font-size: medium
+}
+
 .signupBox{
   display: block;
   width: 220px;
