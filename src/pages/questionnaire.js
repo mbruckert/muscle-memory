@@ -26,11 +26,11 @@ function Questionnaire() {
           
           <div className = "Title">
 
-              <IonTitle size = "large" style={
+              <IonTitle size = "large" style = {
                 {
                   fontSize: '30px'
                 }
-              }> questionnaire </IonTitle>
+              }> Questionnaire </IonTitle>
           
           </div>
 
@@ -42,16 +42,9 @@ function Questionnaire() {
         <ion-list>
           <ion-item>
             
-            <ion-label position="stacked">First Name</ion-label>
-            <ion-input placeholder="Enter First Name"></ion-input>
+            <ion-label position="stacked">Full Name</ion-label>
+            <ion-input placeholder="Enter Full Name"></ion-input>
           
-          </ion-item>
-
-          <ion-item>
-
-            <ion-label position="stacked">Last Name</ion-label>
-            <ion-input placeholder="Enter Last Name"></ion-input>
-
           </ion-item>
           
           <ion-item>
@@ -63,64 +56,29 @@ function Questionnaire() {
           
           <ion-item>
 
-            <ion-label position="stacked">Pronouns</ion-label>
-            <ion-input placeholder="Enter Your Pronouns"></ion-input>
-
-          </ion-item>
-          
-          <ion-item>
-
-            <ion-label position="stacked">Date of Birth</ion-label>
-            <ion-input placeholder="Enter DOB MM-DD-YYYY"></ion-input>
+            <ion-label position="stacked">Age</ion-label>
+            <ion-input placeholder="Enter Age"></ion-input>
 
           </ion-item>
           
           <ion-item>
 
             <ion-label position="stacked">Weight</ion-label>
-            <ion-input placeholder="Enter Weight (lbs)"></ion-input>
+            <ion-input placeholder="Enter Weight (lbs) (e.g., 150)"></ion-input>
 
           </ion-item>
           
           <ion-item>
 
             <ion-label position="stacked">Height</ion-label>
-            <ion-input placeholder="Enter Height (ft)"></ion-input>
+            <ion-input placeholder="Enter Height (ft) (e.g., 5'6)"></ion-input>
 
           </ion-item>
 
           <ion-item>
 
-            <ion-label position="stacked">Workout Rate</ion-label>
-            <ion-input placeholder="Enter Workout Rate"></ion-input>
-
-          </ion-item>
-          
-          <ion-item>
-
-            <ion-label position="stacked">Workout Intensity</ion-label>
-            <ion-input placeholder="Enter Workout Intensity"></ion-input>
-            
-          </ion-item>
-          
-          <ion-item>
-
-            <ion-label position="stacked">Diet</ion-label>
-            <ion-input placeholder="Enter Diet"></ion-input>
-
-          </ion-item>
-          
-          <ion-item>
-
-            <ion-label position="stacked">Goal Weight</ion-label>
-            <ion-input placeholder="Enter Goal Weight (lbs)"></ion-input>
-
-          </ion-item>
-          
-          <ion-item>
-
-            <ion-label position="stacked">Goal Deadline</ion-label>
-            <ion-input placeholder="Enter Goal Deadline MM-DD-YYYY"></ion-input>
+            <ion-label position="stacked">Body Fat</ion-label>
+            <ion-input placeholder="Enter Body Fat (%) (e.g., 40.5)"></ion-input>
 
           </ion-item>
 

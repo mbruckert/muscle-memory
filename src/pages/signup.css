@@ -22,9 +22,25 @@ ion-content {
 
 .signupButton{
   text-align: center;
-  margin-top: 75px
+  margin-top: 375px
 }
 
 .Title{
   color: #000000
+}
+
+
+.questionnaireTitle{
+  align-items: center;
+  font-size: 50px;
+  color: #ffffff
+}
+
+.Inputs{
+display: flex;
+justify-content: center;
+align-items: center;
+text-align: center;
+margin-bottom: 300px;
+height: 120px
 }

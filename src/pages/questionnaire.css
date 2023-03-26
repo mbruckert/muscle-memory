@@ -4,24 +4,22 @@ ion-content {
     --background: linear-gradient(#000A63, #6D7CFF);
 }
 
-  ion-title {
-    height: 10px;
-  }
-
-  .Flexq{
-      display: flex;
-      align-items: center;
-      text-align: center;
-  }
-  .Title{
-      align-items: center;
-      font-size: 50px;
-  }
-  .Inputs{
+.Flexq{
     display: flex;
-    justify-content: center;
     align-items: center;
-    text-align: center;
-    margin-bottom: 300px;
-    height: 120px
+    text-align: center
+}
+
+.Title{
+    align-items: center;
+    font-size: 50px
+}
+
+.Inputs{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  margin-bottom: 300px;
+  height: 120px
 }

@@ -61,6 +61,8 @@ function Login() {
                   password: password,
                 }),
               }).then((data) => {
+                console.log(data);
+                window.localStorage.setItem("token", data); 
                 window.location.href = "/Home";
               });
             }}> Login </IonButton>
