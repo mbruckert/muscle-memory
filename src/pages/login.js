@@ -7,6 +7,7 @@ import {
   IonButton,
   IonList,
   IonItem,
+  IonInput,
 } from "@ionic/react";
 import { useState } from "react";
 import { Link } from "react-router-dom";
@@ -18,74 +19,62 @@ function Login() {
 
   return (
     <IonPage>
-      <IonContent fullscreen>
-        <IonToolbar>
-          <IonTitle> Muscle Memory </IonTitle>
+      <IonHeader mode="ios">
+        <IonToolbar
+          mode="ios"
+          style={{ paddingTop: "20px", paddingBottom: "10px" }}
+        >
+          <IonTitle size="large" style={{ fontSize: "25px" }}>
+            Login
+          </IonTitle>
         </IonToolbar>
-
-        <div className="loginBox">
-          <IonList>
-            <IonItem>
-              <label>
-                <input
-                  mbsc-input
-                  type="text"
-                  data-label="Email"
-                  placeholder="Enter Email"
-                  value={email}
-                  onChange={(e) => {
-                    setEmail(e.target.value);
-                  }}
-                />
-              </label>
-            </IonItem>
-
-            <IonItem>
-              <label>
-                <input
-                  mbsc-input
-                  type="password"
-                  data-label="Password"
-                  placeholder="Enter Password"
-                  data-start-icon="lock2"
-                  data-password-toggle="true"
-                  value={password}
-                  onChange={(e) => {
-                    setPassword(e.target.value);
-                  }}
-                />
-              </label>
-            </IonItem>
-          </IonList>
-        </div>
-
-        <div className="loginButton">
-          <IonButton
-            onClick={() => {
-              fetch("http://127.0.01:5000/signin", {
-                method: "POST",
-                body: JSON.stringify({
-                  email: email,
-                  password: password,
-                }),
-              })
-                .then((response) => response.text())
-                .then((data) => {
-                  window.localStorage.setItem("token", data);
-                  window.location.href = "/Home";
-                });
-            }}
-          >
-            {" "}
-            Login{" "}
-          </IonButton>
-        </div>
-
-        <ul>
-          <Link to="./Signup" className="signupLink">
-            Don't have an account? Signup!
-          </Link>
-        </ul>
+      </IonHeader>
+      <IonContent fullscreen>
+        <IonList mode="ios">
+          <IonItem mode="ios">
+            <IonInput
+              type="text"
+              placeholder="Email"
+              onIonChange={(e) => setEmail(e.target.value)}
+              mode="ios"
+            />
+          </IonItem>
+          <IonItem>
+            <IonInput
+              type="password"
+              placeholder="Password"
+              mode="ios"
+              onIonChange={(e) => setPassword(e.target.value)}
+            />
+          </IonItem>
+          <IonItem style={{ paddingTop: "20px" }}>
+            <IonButton
+              mode="ios"
+              expand="block"
+              size="default"
+              style={{ width: "100%", marginBottom: "20px" }}
+              onClick={() => {
+                fetch("http://127.0.0.1:8000/signin", {
+                  method: "POST",
+                  body: JSON.stringify({
+                    email: email,
+                    password: password,
+                  }),
+                })
+                  .then((response) => response.text())
+                  .then((data) => {
+                    window.localStorage.setItem("token", data);
+                    window.location.href = "/home";
+                  });
+              }}
+            >
+              Sign In
+            </IonButton>
+          </IonItem>
+          <IonItem>
+            <Link to="/signup">Don't have an account? Sign Up</Link>
+          </IonItem>
+        </IonList>
       </IonContent>
     </IonPage>
   );

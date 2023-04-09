@@ -28,35 +28,32 @@ from langchain.schema import (
     SystemMessage
 )
 from langchain.utilities import SerpAPIWrapper
+from decouple import config
 
 app = Flask(__name__)
 cors = CORS(app)
 app.config['CORS_HEADERS'] = 'Content-Type'
 
-os.environ["OPENAI_API_KEY"] = ""
-os.environ["SERPAPI_API_KEY"] = ""
+os.environ["OPENAI_API_KEY"] = config('OPENAI_API_KEY')
+os.environ["SERPAPI_API_KEY"] = config('SERPAPI_API_KEY')
 
 search = SerpAPIWrapper()
 
 
 def get_hashed_password(plain_text_password):
-    # Hash a password for the first time
-    #   (Using bcrypt, the salt is saved into the hash itself)
     return bcrypt.hashpw(plain_text_password, bcrypt.gensalt())
 
 
 def check_password(plain_text_password, hashed_password):
-    # Check hashed password. Using bcrypt, the salt is saved into the hash itself
     return bcrypt.checkpw(plain_text_password, hashed_password)
 
 
-host = ""
+host = config('host')
 dbname = "postgres"
-user = "postgres"
-password = """"""
+user = config('user')
+password = config('password')
 sslmode = "require"
 
-# Build a connection string from the variables
 conn_string = "host={0} user={1} dbname={2} password={3} sslmode={4}".format(
     host, user, dbname, password, sslmode)
 
@@ -64,7 +61,6 @@ postgreSQL_pool = psycopg2.pool.SimpleConnectionPool(1, 20, conn_string)
 if (postgreSQL_pool):
     print("Connection pool created successfully")
 
-# Use getconn() to get a connection from the connection pool
 conn = postgreSQL_pool.getconn()
 
 cursor = conn.cursor()
@@ -138,13 +134,13 @@ def sendmessage():
     llm1 = OpenAI(temperature=0)
 
     db = SQLDatabase.from_uri(
-        """""")
+        """postgresql://postgres:TnZe*sJY3OMe|"%<@34.148.191.128""")
 
     db_chain = SQLDatabaseChain(llm=llm, database=db, verbose=True)
 
     nutrinix_headers = {
         "x-app-id": "13509888",
-        "x-app-key": "",
+        "x-app-key": "dbacf5040facc8cbfa01ebc89cf3ed60",
         "x-remote-user-id": 0
     }
 
@@ -163,74 +159,69 @@ def sendmessage():
         llm, nutrinix_api, headers=nutrinix_headers, verbose=True)
 
     tools = [
-        # Tool(
-        #     name="SQL Database",
-        #     func=db_chain.run,
-        #     description="""Runs a query on an SQL Database. You are able to query data, modify data, or insert data. The following tables are in the db:
+        Tool(
+            name="SQL Database",
+            func=db_chain.run,
+            description="""Runs a query on an SQL Database. You are able to query data, modify data, or insert data. The following tables are in the db:
 
-        #         users:
-        #             -id: uuid
-        #             -name: text
-        #             -email: text
-        #             -age:int4
-        #             -weight: float4
-        #             -height: text
-        #             -body fat: float4
-        #             -token: text
+                users:
+                    -id: uuid
+                    -name: text
+                    -email: text
+                    -age:int4
+                    -weight: float4
+                    -height: text
+                    -body fat: float4
+                    -token: text
 
-        #             goals:
-        #             -id: uuid
-        #             -user_id: uuid
-        #             -goal weight: float4
-        #             -goal body fat: float4
+                    goals:
+                    -id: uuid
+                    -user_id: uuid
+                    -goal weight: float4
+                    -goal body fat: float4
 
-        #             workout_split:
-        #             -id: uuid
-        #             -user_id: uuid
-        #             -detailed_description: text
+                    workout_split:
+                    -id: uuid
+                    -user_id: uuid
+                    -detailed_description: text
 
-        #             workouts:
-        #             -id: uuid
-        #             -user_id: uuid
-        #             -summary: text
-        #             -exercise: text
-        #             -calories burned: int4
-        #             -time: timestamp
+                    workouts:
+                    -id: uuid
+                    -user_id: uuid
+                    -summary: text
+                    -exercise: text
+                    -calories burned: int4
+                    -time: timestamp
 
-        #             meals:
-        #             -id: uuid
-        #             -user_id: uuid
-        #             -meal_name: text
-        #             -ingredients: text
-        #             -calories: int4
-        #             -fat: int4
-        #             -protein: int4
-        #             -carbs: int4
-        #             -meal_type: text
-        #             -time: timestamp
+                    meals:
+                    -id: uuid
+                    -user_id: uuid
+                    -meal_name: text
+                    -ingredients: text
+                    -calories: int4
+                    -fat: int4
+                    -protein: int4
+                    -carbs: int4
+                    -meal_type: text
+                    -time: timestamp
 
-        #             PRs:
-        #             -id: uuid
-        #             -user_id: uuid
-        #             -exercise: text
-        #             -weight: float4
-        #             -time: timestamp
-        #         """
-        # ),
+                    PRs:
+                    -id: uuid
+                    -user_id: uuid
+                    -exercise: text
+                    -weight: float4
+                    -time: timestamp
+                """
+        ),
         Tool(
             name="Google Search",
             func=search.run,
             description="Can be used to get advice, nutritional information, workouts, or anything else. Input should be a query."
-        )
+        ),
         # Tool(
-        #     name="Ask User",
-        #     func=null,
-        #     description="Ask the user for more information if explicitly needed"
-        # )
-        # Tool(
-        #     name = "Nutrition Information",
-        #     func = nutrition_chain.run,
-        #     description = "Can retrieve nutritional information from a natural language query."
+        #     name="Nutrition Information",
+        #     func=nutrition_chain.run,
+        #     description="Can retrieve nutritional information from a natural language query."
         # )
     ]
 
@@ -295,4 +286,4 @@ def sendmessage():
 
 
 if __name__ == '__main__':
-    app.run()
+    app.run(port=8000, debug=True)

@@ -25,156 +25,119 @@ function Signup() {
 
   return (
     <IonPage>
-      <IonContent fullscreen>
-        <IonToolbar>
-          <IonTitle> Muscle Memory </IonTitle>
+      <IonHeader mode="ios">
+        <IonToolbar
+          mode="ios"
+          style={{ paddingTop: "20px", paddingBottom: "10px" }}
+        >
+          <IonTitle size="large" style={{ fontSize: "25px" }}>
+            Sign Up
+          </IonTitle>
         </IonToolbar>
-
-        <div className="signupBox">
-          <ion-list>
-            <ion-item>
-              <ion-label position="stacked">Email</ion-label>
-              <IonInput
-                mbsc-input
-                type="email"
-                placeholder="Enter Email"
-                value={email}
-                onIonChange={(e) => {
-                  setEmail(e.target.value);
-                }}
-              ></IonInput>
-            </ion-item>
-
-            <ion-item>
-              <ion-label position="stacked">Password</ion-label>
-              <IonInput
-                mbsc-input
-                type="password"
-                placeholder="Enter Password"
-                value={password}
-                onIonChange={(e) => {
-                  setPassword(e.target.value);
-                }}
-              ></IonInput>
-            </ion-item>
-
-            <ion-item>
-              <ion-label position="stacked">Full Name</ion-label>
-              <IonInput
-                mbsc-input
-                type="name"
-                placeholder="Enter Name"
-                value={name}
-                onIonChange={(e) => {
-                  setName(e.target.value);
-                }}
-              ></IonInput>
-            </ion-item>
-
-            <ion-item>
-              <ion-label position="stacked">Sex</ion-label>
-              <IonInput
-                mbsc-input
-                type="sex"
-                placeholder="Enter Sex"
-                value={sex}
-                onIonChange={(e) => {
-                  setSex(e.target.value);
-                }}
-              ></IonInput>
-            </ion-item>
-
-            <ion-item>
-              <ion-label position="stacked">Age</ion-label>
-              <IonInput
-                mbsc-input
-                type="age"
-                placeholder="Enter Age"
-                value={age}
-                onIonChange={(e) => {
-                  setAge(e.target.value);
-                }}
-              ></IonInput>
-            </ion-item>
-
-            <ion-item>
-              <ion-label position="stacked">Weight</ion-label>
-              <IonInput
-                mbsc-input
-                type="weight"
-                placeholder="Enter Weight (lbs) (e.g., 150)"
-                value={weight}
-                onIonChange={(e) => {
-                  setWeight(e.target.value);
-                }}
-              ></IonInput>
-            </ion-item>
-
-            <ion-item>
-              <ion-label position="stacked">Height</ion-label>
-              <IonInput
-                mbsc-input
-                type="height"
-                placeholder="Enter Height (ft) (e.g., 5'6)"
-                value={height}
-                onIonChange={(e) => {
-                  setHeight(e.target.value);
-                }}
-              ></IonInput>
-            </ion-item>
-
-            <ion-item>
-              <ion-label position="stacked">Body Fat</ion-label>
-              <IonInput
-                mbsc-input
-                type="bodyFat"
-                placeholder="Enter Body Fat (%) (e.g., 40.5)"
-                value={bodyFat}
-                onIonChange={(e) => {
-                  setBodyFat(e.target.value);
-                }}
-              ></IonInput>
-            </ion-item>
-          </ion-list>
-        </div>
-
-        <div className="signupButton">
-          <IonButton
-            onClick={() => {
-              fetch("http://127.0.01:5000/signup", {
-                method: "POST",
-                body: JSON.stringify({
-                  name: name,
-                  email: email,
-                  password: password,
-                  age: parseInt(age),
-                  weight: parseFloat(weight),
-                  height: height,
-                  body_fat: parseFloat(bodyFat),
-                  sex: sex,
-                }),
-              })
-                .then((response) => response.text())
-                .then((data) => {
-                  console.log(data);
-                  // window.localStorage.setItem("token", data);
-                  // window.location.href = "/Home";
+      </IonHeader>
+      <IonContent fullscreen>
+        <IonList mode="ios">
+          <IonItem mode="ios">
+            <IonInput
+              type="text"
+              placeholder="Email"
+              onIonChange={(e) => setEmail(e.target.value)}
+              mode="ios"
+            />
+          </IonItem>
+          <IonItem>
+            <IonInput
+              type="password"
+              placeholder="Password"
+              mode="ios"
+              onIonChange={(e) => setPassword(e.target.value)}
+            />
+          </IonItem>
+          <IonItem>
+            <IonInput
+              type="text"
+              placeholder="Full Name"
+              mode="ios"
+              onIonChange={(e) => setName(e.target.value)}
+            />
+          </IonItem>
+          <IonItem>
+            <IonInput
+              type="text"
+              placeholder="Enter Sex"
+              value={sex}
+              onIonChange={(e) => {
+                setSex(e.target.value);
+              }}
+              mode="ios"
+            />
+          </IonItem>
+          <IonItem>
+            <IonInput
+              type="number"
+              placeholder="Age"
+              mode="ios"
+              onIonChange={(e) => setAge(e.target.value)}
+            />
+          </IonItem>
+          <IonItem>
+            <IonInput
+              type="number"
+              placeholder="Weight"
+              mode="ios"
+              onIonChange={(e) => setWeight(e.target.value)}
+            />
+          </IonItem>
+          <IonItem>
+            <IonInput
+              type="text"
+              placeholder="Height"
+              mode="ios"
+              onIonChange={(e) => setHeight(e.target.value)}
+            />
+          </IonItem>
+          <IonItem>
+            <IonInput
+              type="number"
+              placeholder="Body Fat"
+              mode="ios"
+              onIonChange={(e) => setBodyFat(e.target.value)}
+            />
+          </IonItem>
+          <IonItem style={{ paddingTop: "20px" }}>
+            <IonButton
+              mode="ios"
+              expand="block"
+              size="default"
+              style={{ width: "100%", marginBottom: "20px" }}
+              onClick={() => {
+                fetch("http://127.0.01:8000/signup", {
+                  method: "POST",
+                  body: JSON.stringify({
+                    email: email,
+                    password: password,
+                    name: name,
+                    sex: sex,
+                    age: age,
+                    weight: weight,
+                    height: height,
+                    bodyFat: bodyFat,
+                  }),
                 })
-                .catch((error) => {
-                  console.log(error);
-                });
-            }}
-          >
-            {" "}
-            Signup{" "}
-          </IonButton>
-        </div>
-
-        <ul>
-          <Link to="./Login" className="loginLink">
-            Have an account? Login!
-          </Link>
-        </ul>
+                  .then((response) => response.text())
+                  .then((data) => {
+                    window.localStorage.setItem("token", data);
+                    window.location.href = "/home";
+                  });
+              }}
+            >
+              Sign Up
+            </IonButton>
+          </IonItem>
+          <IonItem>
+            <Link to="/signin">Already have an account? Sign In</Link>
+          </IonItem>
+        </IonList>
       </IonContent>
     </IonPage>
   );

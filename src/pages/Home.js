@@ -11,6 +11,8 @@ import {
   IonFab,
   IonIcon,
   IonButton,
+  IonList,
+  IonItem,
 } from "@ionic/react";
 import "./Home.css";
 
@@ -18,7 +20,7 @@ function Home() {
   const [messages, setMessages] = useState([]);
 
   // useEffect(() => {
-  //   fetch("http://127.0.01:5000/getmessages", {
+  //   fetch("http://127.0.01:8000/getmessages", {
   //     method: "POST",
   //     headers: {
   //       "Content-Type": "application/json",
@@ -35,7 +37,7 @@ function Home() {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    fetch("http://127.0.01:5000/sendmessage", {
+    fetch("http://127.0.01:8000/sendmessage", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
@@ -61,42 +63,55 @@ function Home() {
 
   return (
     <IonPage>
-      <IonContent fullscreen>
-        <IonToolbar>
-          <IonTitle> Muscle Memory </IonTitle>
+      <IonHeader mode="ios">
+        <IonToolbar
+          mode="ios"
+          style={{ paddingTop: "20px", paddingBottom: "10px" }}
+        >
+          <IonTitle slot="secondary" size="large" style={{ fontSize: "25px" }}>
+            Chat
+          </IonTitle>
           <IonButton
-            slot="end"
+            slot="primary"
+            size="small"
+            mode="ios"
             onClick={(data = window.localStorage.getItem("token")) => {
               console.log(data);
               window.localStorage.removeItem("token", data);
-              window.location.href = "/Login";
+              window.location.href = "/signin";
             }}
           >
-            Logout
+            Sign Out
           </IonButton>
         </IonToolbar>
-
-        <div className="chat">
-          <div className="messageBox">
-            {messages.map((message, index) => {
-              return (
-                <div key={index} className="message">
-                  {message}
-                </div>
-              );
-            })}
-          </div>
-          <form onSubmit={handleSubmit} className="input-box">
+      </IonHeader>
+      <IonContent fullscreen>
+        <IonList>
+          {messages.map((message) => (
+            <IonItem key={message}>{message}</IonItem>
+          ))}
+        </IonList>
+        <form onSubmit={handleSubmit}>
+          <IonItem>
             <IonInput
+              type="text"
               name="messageInput"
-              placeholder="Muscle Memory"
-              className="input"
+              placeholder="Enter Message"
+              mode="ios"
             />
-            <IonButton type="submit" className="submit-button" shape="round">
+          </IonItem>
+          <IonItem>
+            <IonButton
+              type="submit"
+              mode="ios"
+              expand="block"
+              size="default"
+              style={{ width: "100%", marginBottom: "20px", marginTop: "20px" }}
+            >
               Send
             </IonButton>
-          </form>
-        </div>
+          </IonItem>
+        </form>
       </IonContent>
     </IonPage>
   );
