@@ -135,7 +135,7 @@ function Signup() {
             </IonButton>
           </IonItem>
           <IonItem>
-            <Link to="/signin">Already have an account? Sign In</Link>
+            <Link to="/signin">Already have an account? Sign In instead</Link>
           </IonItem>
         </IonList>
       </IonContent>

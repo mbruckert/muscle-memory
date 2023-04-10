@@ -72,7 +72,7 @@ function Login() {
             </IonButton>
           </IonItem>
           <IonItem>
-            <Link to="/signup">Don't have an account? Sign Up</Link>
+            <Link to="/signup">Don't have an account? Sign Up instead</Link>
           </IonItem>
         </IonList>
       </IonContent>

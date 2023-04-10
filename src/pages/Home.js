@@ -9,12 +9,14 @@ import {
   IonInput,
   IonTab,
   IonFab,
-  IonIcon,
   IonButton,
   IonList,
   IonItem,
+  IonIcon,
 } from "@ionic/react";
 import "./Home.css";
+
+import { send } from "ionicons/icons";
 
 function Home() {
   const [messages, setMessages] = useState([]);
@@ -96,7 +98,7 @@ function Home() {
             <IonInput
               type="text"
               name="messageInput"
-              placeholder="Enter Message"
+              placeholder="Your Message"
               mode="ios"
             />
           </IonItem>
@@ -108,7 +110,8 @@ function Home() {
               size="default"
               style={{ width: "100%", marginBottom: "20px", marginTop: "20px" }}
             >
-              Send
+              <IonIcon slot="start" icon={send}></IonIcon>
+              Send Message
             </IonButton>
           </IonItem>
         </form>
